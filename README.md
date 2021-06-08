@@ -1,4 +1,4 @@
-# SummerCamp2021
+# Arduino Summer Camp 2021
 
 ## Download and install
 https://www.arduino.cc/en/software
