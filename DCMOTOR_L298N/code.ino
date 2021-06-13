@@ -14,7 +14,7 @@ void setup()
 
 void loop()
 {
-  	digitalWrite(ENABLE,HIGH);
-	  digitalWrite(INPUT1, LOW);
-  	digitalWrite(INPUT2, HIGH);
+    //digitalWrite(ENABLE,HIGH);
+    digitalWrite(INPUT1, LOW);
+    digitalWrite(INPUT2, HIGH);
 }
