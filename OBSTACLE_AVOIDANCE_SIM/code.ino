@@ -10,6 +10,7 @@ const int RightMotorForward = 7;
 const int RightMotorBackward = 6;
 int distance = 100;
 Servo myservo;
+boolean goesForward = false;
 void setup()
 {
   pinMode(10,OUTPUT);
@@ -85,16 +86,21 @@ void stop()
 void forward()
 {
     Serial.println("I moving forward");
+  if(!goesForward)
+  {
+    goesForward = true;
     digitalWrite(LeftMotorForward, HIGH);
   	digitalWrite(LeftMotorBackward, LOW);
   
     digitalWrite(RightMotorForward, LOW);
     digitalWrite(RightMotorBackward, HIGH);
+  }
 }
 
 void back()
 {
     Serial.println("I am moving back");
+    goesForward = false;
     digitalWrite(LeftMotorForward, LOW);
   	digitalWrite(LeftMotorBackward, HIGH);
   
