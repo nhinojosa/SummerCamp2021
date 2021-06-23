@@ -19,7 +19,7 @@ NewPing sonar(trig_pin, echo_pin, maximum_distance); //sensor function
 Servo servo_motor; 
 
 void setup(){
-
+  Serial.begin(9600);
   pinMode(RightMotorForward, OUTPUT);
   pinMode(LeftMotorForward, OUTPUT);
   pinMode(LeftMotorBackward, OUTPUT);
@@ -93,7 +93,9 @@ int lookLeft(){
 
 int readPing(){
   delay(70);
+  
   int cm = sonar.ping_cm();
+  Serial.println(cm);
   if (cm==0){
     cm=250;
   }
