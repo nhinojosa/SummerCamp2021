@@ -44,7 +44,7 @@ void loop(){
   int distanceRight = 0;
   int distanceLeft = 0;
   delay(50);
-
+  Serial.println(distance);
   if (distance <= 20){
     moveStop();
     delay(300);
@@ -95,7 +95,7 @@ int readPing(){
   delay(70);
   
   int cm = sonar.ping_cm();
-  Serial.println(cm);
+  
   if (cm==0){
     cm=250;
   }
