@@ -20,11 +20,12 @@ void setup()
   pinMode(FRONT_ECHO, INPUT);
   lcd.setBacklight(255);  
   lcd.begin(16,2);
+  lcd.clear();
 }
 
 void loop()
 {
-  lcd.clear();
+  
   double left_distance, right_distance, front_distance;
   left_distance = ping(LEFT_TRIG, LEFT_ECHO);
   right_distance = ping(RIGHT_TRIG, RIGHT_ECHO);
