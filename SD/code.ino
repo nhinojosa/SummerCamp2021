@@ -58,6 +58,7 @@ void loop()
   else
   {
     Serial.println("Good Distance!");
+    lcd.print("Good Distance!");
   }
   
   delay(1000);
