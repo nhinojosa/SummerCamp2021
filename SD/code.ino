@@ -28,7 +28,7 @@ void setup()
 
 void loop()
 {
-  
+  lcd.setCursor(0, 0);
   double left_distance = 100, right_distance = 100, front_distance = 100;
   left_distance = ping(LEFT_TRIG, LEFT_ECHO);
   right_distance = ping(RIGHT_TRIG, RIGHT_ECHO);
