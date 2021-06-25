@@ -60,6 +60,8 @@ void loop()
     Serial.println("Good Distance!");
   }
   
+  delay(1000);
+  
 }
 
 double ping(int TRIG, int ECHO)
