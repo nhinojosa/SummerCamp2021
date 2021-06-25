@@ -31,19 +31,25 @@ void loop()
   right_distance = ping(RIGHT_TRIG, RIGHT_ECHO);
   front_distance = ping(FRONT_TRIG, FRONT_ECHO);
   
-  if(left_distance < 72)
+  if(left_distance < 3)
   {
-    Serial.println("LEFT: Keep 6 feet!");
+    Serial.print("LEFT: ");
+    Serial.print(left_distance);
+    Serial.println();
     lcd.print("Keep 6ft left!");
   }
-  else if(right_distance < 72)
+  else if(right_distance < 3)
   {
-    Serial.println("RIGHT: Keep 6 feet!");
+    Serial.print("RIGHT: ");
+    Serial.print(right_distance);
+    Serial.println();
     lcd.print("Keep 6ft right!");
   }
-  else if(front_distance < 72)
+  else if(front_distance < 3)
   {
-    Serial.println("FRONT: Keep 6 feet!");
+    Serial.print("FRONT: ");
+    Serial.print(front_distance);
+    Serial.println();
     lcd.print("Keep 6ft front!");
   }
   else
